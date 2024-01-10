@@ -206,7 +206,7 @@ Here, last Monday is _today_ as a timestamp, minus 86400 times the current weekd
 {% raw %}
 
 ```yaml
-    start: "{{ now().replace(day=1, month=now().month-1, hour=0, minute=0, second=0, microsecond=0) }}"
+    start: "{{ now().replace(day=1, month=now().month-1 or 12, hour=0, minute=0, second=0, microsecond=0) }}"
     end: "{{ now().replace(day=1, hour=0, minute=0, second=0, microsecond=0) }}"
 ```
 
